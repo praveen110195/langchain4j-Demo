@@ -1,0 +1,32 @@
+
+spring:
+  application:
+    name: langchain4j-demo
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    defer-datasource-initialization: true
+
+server.port: 9292
+
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ""
+      model-name: gpt-5.6-luna
+      reasoning-effort: none
+      log-requests: true
+      log-responses: true
+
+
